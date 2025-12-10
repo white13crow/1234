@@ -1,0 +1,8 @@
+<h2>Вхід</h2>
+<form (ngSubmit)="login()">
+  <input [(ngModel)]="username" name="username" placeholder="Username"><br><br>
+  <input [(ngModel)]="password" name="password" type="password" placeholder="Password"><br><br>
+  <button type="button" (click)="login()">Увійти</button>
+</form>
+<p *ngIf="error" style="color:red">Ім'я користувача або пароль введені не вірно</p>
+<p style="color:#666">Тестові: Admin / 12345</p>

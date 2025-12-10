@@ -1,0 +1,6 @@
+<h2>Доставка</h2>
+<div *ngIf="shippingCosts">
+  <div *ngFor="let s of shippingCosts">
+    <p>{{s.type}}: {{s.price}} USD</p>
+  </div>
+</div>

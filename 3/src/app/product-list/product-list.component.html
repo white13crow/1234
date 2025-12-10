@@ -1,0 +1,7 @@
+<h2>Список товарів</h2>
+<div *ngFor="let product of products; index as productId" style="border:1px solid #ddd;padding:8px;margin-bottom:8px;">
+  <h3><a [routerLink]="['/products', productId]">{{product.name}}</a></h3>
+  <p *ngIf="product.description">{{product.description}}</p>
+  <button (click)="share(product)">Share</button>
+  <app-product-alerts [product]="product" (notify)="onNotify('Повідомлення для ' + product.name)"></app-product-alerts>
+</div>

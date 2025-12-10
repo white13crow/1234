@@ -1,0 +1,19 @@
+<h2>Кошик</h2>
+<div *ngIf="items.length === 0">Кошик порожній</div>
+<div *ngFor="let item of items">
+  <p>{{item.name}} - {{item.price}} USD</p>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Ім'я</label><br>
+    <input formControlName="name" placeholder="Ім'я">
+  </div>
+  <div>
+    <label>Адреса</label><br>
+    <input formControlName="address" placeholder="Адреса">
+  </div>
+  <button type="submit">Придбати</button>
+</form>
+
+<a routerLink="/shipping">Дивитися варіанти доставки</a>
