@@ -1,0 +1,60 @@
+/* basic reset */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fb;
+  color: #222;
+}
+
+/* navbar */
+.navbar { background: #2a7f62; }
+.nav-link, .navbar-brand { color: #fff !important; }
+.nav-link:hover { color: #e6f7ef !important; }
+
+/* header with background image (використовує header-background.jpg) */
+.header {
+  background-image: url('../images/header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-bottom: 4px solid rgba(0,0,0,0.05);
+}
+.overlay {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+}
+.description { position: relative; z-index: 2; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+.description h1 { font-size: 2.2rem; margin-bottom: .3rem; }
+.description p { font-size: 1.05rem; margin-bottom: .8rem; }
+
+/* About photo */
+.about-photo { max-width: 320px; }
+
+/* cards (works) */
+.card { border: none; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.card-img-top { object-fit: cover; height: 200px; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+
+/* main container spacing */
+.features { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* form */
+.contact-form .form-control { border-radius: 4px; }
+
+/* footer */
+.page-footer { background: #1f2933; color: #cbd5db; }
+.page-footer a { color: #cbd5db; }
+.page-footer h6 { color: #fff; }
+
+/* responsive tweaks */
+@media (max-width: 767px) {
+  .description h1 { font-size: 1.6rem; }
+  .card-img-top { height: 160px; }
+  .about-photo { max-width: 220px; }
+}
